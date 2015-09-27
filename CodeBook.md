@@ -120,7 +120,7 @@ All steps for cleaning the data are done within the `run_analysis.R` script. So 
                 6. LAYING  
         
  subject  
-Description: Subject id number
+Description: Subject id number  
 Values (integer): 1-30 Integer
  
  tBodyAcc.mean...X          
