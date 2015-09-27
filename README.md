@@ -1,13 +1,15 @@
-# Course Project: Getting and Cleaning Data
-### _Manuel Torres-Sahli_
+---
+title: "Course Project: Getting and Cleaning Data"
+author: "Manuel Torres-Sahli"
+date: "September 27, 2015"
+output: html_document
+---
 
-####Repository for Course Project: 'Getting and Cleaning Data' (getdata-032) from John Hopkins University's Data Science Specialization on Coursera
-
-This repository contains a script and a codebook. Codebook describes the variables, the data, and the work and transformations performed to clean up the data as asked for the assignment.
+#####Repository for Course Project: 'Getting and Cleaning Data' (getdata-032) from John Hopkins University's Data Science Specialization on Coursera. This repository contains a script and a codebook. `CodeBook.md` describes the variables, the data, and the work and transformations performed to clean up the data as asked for the assignment.
 
 ### The Script
 
-The script is one complete solution to the assignment. It uses the raw Samsung dataset to create a tidy data set with the mean and standard deviation of each measure for each activity and each subject. If the dataset isn't in the working folder, the script attempts to download it. The script uses base R package and dplyr package; if the dplyr package is not installed the script attempts to install it before loading it.
+The script `run_analysis.R` is one complete solution to the assignment. It uses the raw Samsung dataset to create a tidy data set with the mean and standard deviation of each measure for each activity and each subject. If the dataset isn't in the working folder, the script attempts to download it. The script uses base R package and dplyr package; if the dplyr package is not installed the script attempts to install it before loading it.
 
 #### What the script does, step-by-step:
 
