@@ -85,7 +85,7 @@ if(dir.exists('test') & dir.exists('train')) {
 
 # Load:
 #       data sets
-#       set labels
+#       set activity labels id
 #       activity and features labels
 #       subjects id
 
@@ -117,7 +117,8 @@ if("dplyr" %in% rownames(installed.packages()) == FALSE) {
         install.packages("dplyr")
 } else {
         message("dplyr package already installed")
-} library(dplyr)
+}
+library(dplyr)
 
 # Convert data frames into data frame tables
 data_set <- tbl_df(data_set)
@@ -136,12 +137,14 @@ colnames(data_set) <- features[, 2]
 data_set2 <- data_set
 
 # Rename all variables with valid and nonduplicate names
-        valid_column_names <- make.names(names=names(data_set2), unique=TRUE, allow_ = TRUE)
+        valid_column_names <- make.names(names=names(data_set2), 
+                                         unique=TRUE, allow_ = TRUE)
         names(data_set2) <- valid_column_names
         data_set2 <- data_set2[, !duplicated(names(data_set)) ]
 
-# Use dplyr to select mean and std columns, without angle column
-data_set2 <- select(data_set2, contains("mean.."), contains("std.."), -contains("angle"))
+# Use dplyr to select mean and std columns
+data_set2 <- select(data_set2, contains("mean..", ignore.case = FALSE),
+                    contains("std.."))
 
 
 ########
